@@ -1,0 +1,9 @@
+project: savantenvs/tensorflow
+target: tflite_interp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tflite_interp/testsuite
+cmds:
+  - cmd: /mayhem/tflite_interp
+    libfuzzer: true
+    timeout: 30
