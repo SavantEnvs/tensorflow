@@ -1,0 +1,9 @@
+project: savantenvs/tensorflow
+target: tflite_resize
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/tflite_resize/testsuite
+cmds:
+  - cmd: /mayhem/tflite_resize
+    libfuzzer: true
+    timeout: 30
